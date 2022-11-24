@@ -38,16 +38,17 @@ body {
     
   }
   
-  input[type="submit"]{
+  input[type="submit"][id="regis-cli"]{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background: #F23545;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
     border: none;
-    margin-top: 70px;
-    width: 30%;
+    margin-top: 5%;
+    width: 20%;
+    height: 5%  ;
     font-size: 16px;
-    margin-left: -12%;
+    margin-left: 0%;
 
   }
   input[type="submit"]:hover {
@@ -64,3 +65,15 @@ body {
     padding-bottom: 10px;
     border-bottom: 2px solid #F23545;
   }
+.spacing{
+  margin-left: 35%;
+}
+p [id="validacionRe"]{
+  font-size: 1%;
+}
+.alert{
+  padding: 20px;
+  background-color: #f44336; /* Red */
+  color: white;
+  margin-bottom: 15px;
+}

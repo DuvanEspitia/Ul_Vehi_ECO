@@ -3,7 +3,7 @@ import React, { useState} from "react";
 import ReactDOM from "react-dom";
 import {Box,Grid} from "@material-ui/core"
 import logo from "../Images/logo.jpg";
-
+import { Link } from "react-router-dom";
 function Login() {
   // React States
   const [errorMessages, setErrorMessages] = useState({});
@@ -83,7 +83,11 @@ function Login() {
             {renderErrorMessage("pass")}
           </div>
         <div className="button-container">
-          <input type="submit" />
+        <Link to="/home" className="link">
+        <input type="submit" id="log" />
+        </Link>
+          
+          
 
         </div>
          

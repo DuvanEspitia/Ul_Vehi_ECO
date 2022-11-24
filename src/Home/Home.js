@@ -8,6 +8,7 @@ import car from "../../src/Images/car.png";
 import user from "../../src/Images/cliente.png";
 import doc from "../../src/Images/documento.png";
 import revi from "../../src/Images/revisar.png";
+import background from "../../src/Images/logo.jpg";
 
 function Home(){
   const[dropdown,setDropdown]=useState(false);
@@ -20,7 +21,8 @@ function Home(){
   const abrirCerrarDropdown3=()=>{ setDropdown3(!dropdown3);}
   return(
 
-                <div>
+                <div className='main-container'>
+                
                         <Grid container spacing={12} direction="row" justifyContent="center" alignItems="flex-start">
                         <Grid item xs={12} >
                 <div className="top">
@@ -33,13 +35,13 @@ function Home(){
                          <div className="Button-home">
                          <img src={user} className="img" alt="user"></img>
                                 <Dropdown isOpen={dropdown1} toggle={abrirCerrarDropdown1} >
-                                        <DropdownToggle caret className="Botoncae">
+                                        <DropdownToggle caret className="Botoncae" >
                                         Cliente
                                         </DropdownToggle>
                                  <DropdownMenu>
-                                        <DropdownItem className="Contenido">Cliente registrado</DropdownItem>
-                                        <DropdownItem className="Contenido">
-                                                <Link to="/Formulario" className="link"> Cliente nuevo</Link>
+                                        <DropdownItem ><Link to="/ClienteRegistrado" className="link">Cliente registrado</Link></DropdownItem>
+                                        <DropdownItem >
+                                                <Link to="/Registerclie" className="link"> Cliente nuevo</Link>
                                                 </DropdownItem>
                                   </DropdownMenu>
                                  </Dropdown>
@@ -54,8 +56,8 @@ function Home(){
                                         Vehiculo
                                         </DropdownToggle>
                                 <DropdownMenu>
-                                        <DropdownItem className="Contenido">Vehiculo registrado</DropdownItem>
-                                        <DropdownItem className="Contenido"><Link to="/Form" className="link"> Vehiculo nuevo</Link></DropdownItem>
+                                        <DropdownItem ><Link to="/RevisionTec" className="link">Vehiculo registrado</Link></DropdownItem>
+                                        <DropdownItem ><Link to="/Form" className="link"> Vehiculo nuevo</Link></DropdownItem>
                                 </DropdownMenu>
                         </Dropdown>
                                 </div>
@@ -72,9 +74,9 @@ function Home(){
                                 Revisiones
                                 </DropdownToggle>
                                 <DropdownMenu>
-                                        <DropdownItem className="Contenido">Técnica</DropdownItem>
-                                        <DropdownItem className="Contenido">Tecno mecánica</DropdownItem>
-                                        <DropdownItem className="Contenido">Motor</DropdownItem>
+                                        <DropdownItem >Técnica</DropdownItem>
+                                        <DropdownItem >Tecno mecánica</DropdownItem>
+                                        <DropdownItem ><Link to="/RevisionMotor" className="link">Motor</Link></DropdownItem>
                                 </DropdownMenu>
                         </Dropdown>
                                 </div>  
@@ -88,10 +90,10 @@ function Home(){
                                 Reporte
                                 </DropdownToggle>
                                 <DropdownMenu>
-                                        <DropdownItem className="Contenido">Peritaje</DropdownItem>
-                                        <DropdownItem className="Contenido">Revisión técnica</DropdownItem>
-                                        <DropdownItem className="Contenido">Revisión mecánica</DropdownItem>
-                                        <DropdownItem className="Contenido">Revisión motor</DropdownItem>
+                                        <DropdownItem >Peritaje</DropdownItem>
+                                        <DropdownItem ><Link to="/RevisionTec" className="link">Revisión técnica</Link></DropdownItem>
+                                        <DropdownItem >Revisión mecánica</DropdownItem>
+                                        <DropdownItem >Revisión motor</DropdownItem>
                                 </DropdownMenu>
                         </Dropdown>
                                 </div>

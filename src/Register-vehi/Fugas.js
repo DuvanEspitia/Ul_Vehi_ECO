@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import React from 'react';
 import {Grid} from "@material-ui/core"
 import './FormPagesVeh.css';
-function Fugas(){
+function Fugas({formData,setFormData}){
 
         const {register,formState:{errors},handleSubmit}= useForm();
 
@@ -22,13 +22,13 @@ function Fugas(){
               
                  <div>
                          <label>En freno</label>
-                        <input type="text" {...register("EnFreno",{required:true,maxLength:25})}/>
+                        <input type="text"value={formData.Enfreno} onChange={(event)=> setFormData({...formData, Enfreno:event.target.value})}/>
                         {errors.DireccionalDelanteraIzquierda?.type=== "required"&&<p>* Obligatorio</p>}
                         </div>
                         <div>
                         <label>En caja
                         </label>
-                        <input type="text" {...register("EnCaja ",{required:true,maxLength:25})}/>
+                        <input type="text" value={formData.Encaja} onChange={(event)=> setFormData({...formData, Encaja:event.target.value})}/>
                          {errors.EnCaja?.type=== "required"&&<p>* Obligatorio</p>}
                          </div>
                 </Grid>
@@ -39,13 +39,13 @@ function Fugas(){
 
                         <div>
                         <label >Sistema de dirección</label>
-                        <input type="text" {...register("SistemaDeDireccion",{required:true,maxLength:6})}/>
+                        <input type="text" value={formData.Sistemadedirección} onChange={(event)=> setFormData({...formData, Sistemadedirección:event.target.value})}/>
                         {errors.SistemaDeDireccion?.type=== "required"&&<p>* Obligatorio</p>}
                         
                         </div>
                         <div>
                         <label >En motor</label>
-                        <input type="text" {...register("EnMotor",{required:true,maxLength:18})}/>
+                        <input type="text" value={formData.Enmotor} onChange={(event)=> setFormData({...formData, Enmotor:event.target.value})}/>
                  {errors.EnMotor?.type=== "required"&&<p>* Obligatorio</p>}
                         
                         </div>
@@ -57,13 +57,13 @@ function Fugas(){
 
                         <div>
                         <label >En transmisión</label>
-                        <input type="text" {...register("EnTransmision",{required:true,maxLength:6})}/>
+                        <input type="text" value={formData.Entransmisión} onChange={(event)=> setFormData({...formData, Entransmisión:event.target.value})}/>
                         {errors.StopIzquierdo?.type=== "required"&&<p>* Obligatorio</p>}
                         
                         </div>
                         <div>
                         <label>En combustible</label>
-                        <input type="text" {...register("EnCombustible",{required:true,maxLength:18})}/>
+                        <input type="text" value={formData.Encombustible} onChange={(event)=> setFormData({...formData, Encombustible:event.target.value})}/>
                         {errors.direccionDelanteraDerecha?.type=== "required"&&<p>* Obligatorio</p>}
                         <br  /> <br  /><br  />  <br  /><br  />  <br  /><br  />  <br  />
                         </div>

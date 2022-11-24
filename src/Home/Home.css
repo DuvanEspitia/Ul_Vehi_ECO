@@ -1,12 +1,12 @@
 .Home {
-    
+
     font-family: sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 20px;
-    height: 100vh;
+    
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     
   }
@@ -16,18 +16,17 @@
     height: 50%!important;
   }
   
-.dropdown-menu{
-width: 90%;
-}
+
   
   
   .Botoncae {
     color: white!important;
     background-color: #F23545!important;
     border-color: black !important;
-    height: 100%!important;
-    width: 120%!important;
-    margin-left: 35px;
+    margin-bottom: -1%;
+    margin-left: 30%;
+    width: 100%;
+    height: auto;
   }
   
   
@@ -44,11 +43,17 @@ width: 90%;
   
   }
   
-  .DropdownItem {
+  .dropdown-item {
+   
+    
+    width: 100%!important;
     border-color: rgb(0, 0, 0) !important;
-    height: 100%!important;
-    width: 180%!important;
+    
   }
+  .dropdown-menu.show {
+    display: block!important;
+    width: 100%!important;
+}
   
   .link {
     text-decoration: none;
@@ -64,7 +69,7 @@ width: 90%;
     height: 130%;
   }
   .space{
-    margin-top: 10%;
+    margin-top: 5%;
   }
   .imgc{
     margin-left: 20%;
@@ -73,3 +78,10 @@ width: 90%;
     height: 130%;
     margin-top: 14px;
   }
+
+.main-container{
+  height: 100vh;
+  background-size: cover;
+ background: linear-gradient(#ff000005,#ffffff,#ffffff,#ff00002c );
+
+}

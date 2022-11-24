@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import React from 'react';
 import { Grid } from "@material-ui/core"
 import './FormPagesVeh.css';
-function Llantas() {
+function Llantas({formData,setFormData}) {
 
         const { register, formState: { errors }, handleSubmit } = useForm();
 
@@ -24,7 +24,7 @@ function Llantas() {
                                         <br />
                                         <div className="llanta">
                                                 <label>Llanta delantera derecha</label>
-                                                <select {...register("LlantaDelanteraDerecha")}>
+                                                <select value={formData.Llantadelanteraderecha} onChange={(event)=> setFormData({...formData, Llantadelanteraderecha:event.target.value})}>
                                                         <option value="null">Selec</option>
                                                         <option value="0%">0%</option>
                                                         <option value="10%">10%</option>
@@ -44,7 +44,7 @@ function Llantas() {
                                         <div className="llanta">
                                                 <br />
                                                 <label>Llanta delantera izquierda</label>
-                                                <select {...register("LlantaDelanteraIzquierda")}>
+                                                <select value={formData.Llantadelanteraizquierda} onChange={(event)=> setFormData({...formData, Llantadelanteraizquierda:event.target.value})}>
                                                 <option value="null">Selec.</option>
                                                         <option value="0%">0%</option>
                                                         <option value="10%">10%</option>
@@ -70,7 +70,7 @@ function Llantas() {
                                         <br />
                                         <div className="llanta">
                                                 <label>Llanta trasera derecha</label>
-                                                <select {...register("LlantaTraseraDerecha")}>
+                                                <select value={formData.Llantatraseraderecha} onChange={(event)=> setFormData({...formData, Llantatraseraderecha:event.target.value})}>
                                                         <option value="null">Selec.</option>
                                                         <option value="0%">0%</option>
                                                         <option value="10%">10%</option>
@@ -89,7 +89,7 @@ function Llantas() {
                                         <div className="llanta" >
                                                 <br />
                                                 <label>Llanta trasera izquierda</label>
-                                                <select {...register("LlantaTraseraIzquierda")}>
+                                                <select value={formData.Llantatraseraizquierda} onChange={(event)=> setFormData({...formData, Llantatraseraizquierda:event.target.value})}>
                                                 <option value="null">Selec.</option>
                                                         <option value="0%">0%</option>
                                                         <option value="10%">10%</option>

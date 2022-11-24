@@ -1,7 +1,7 @@
 body {
     background: #ffffff;
     font-family: Verdana, sans-serif;
-    
+   
   }
   
   code {
@@ -59,7 +59,9 @@ body {
     text-transform: uppercase;
     border: none;
     font-weight: 100;
-  
+    margin-left: -20px;
+    width: 100%;
+    height: auto;
   }
   h2 {
     font-family: Verdana, sans-serif;

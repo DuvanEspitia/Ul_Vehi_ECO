@@ -11,8 +11,9 @@ import FormularioCarro from './Register-vehi/FormularioCarro';
 import LatoneriaVeh from './Register-vehi/LatoneriaVeh';
 import Pintura from './Register-vehi/Pintura';
 import Inferior from './Register-vehi/inferior';
-
-
+import RevisionMotor from './RevisionMotor/RevisionMotor';
+import RevisionTecnicaVehi from './RevisionTecnicov/RevisionTecnicaVehi';
+import ClienteRegistrado from './Register-clie/ClienteRegistrado';
 function App() {
   return (  
     <div>
@@ -29,8 +30,10 @@ function App() {
       <Route  path='/LatoneriaVeh' element= {<LatoneriaVeh/>}/>
       <Route  path='/Pintura' element= {<Pintura/>}/>
       <Route  path='/Inferior' element= {<Inferior/>}/>
-      
-     
+      <Route  path='/Registerclie' element= {<Registerclie/>}/>
+      <Route  path='/RevisionMotor' element= {<RevisionMotor/>}/>
+      <Route  path='/RevisionTec' element= {<RevisionTecnicaVehi/>}/>
+      <Route  path='/ClienteRegistrado' element= {<ClienteRegistrado/>}/>
       </Routes>
       </Router>
       </div>

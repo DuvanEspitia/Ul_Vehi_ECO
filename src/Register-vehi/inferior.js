@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import React from 'react';
 import {Grid} from "@material-ui/core"
 import  "./FormPagesVeh.css";
-function Inferior (){
+function Inferior ({formData,setFormData}){
 
         const {register,formState:{errors},handleSubmit}= useForm();
 
@@ -21,35 +21,31 @@ function Inferior (){
                  
               
                  <div>
-                         <label>Alma paragolpes trasero</label>
-                        <input type="text" className="Box-size" {...register("almaParagolpesTrasero",{required:true,maxLength:25})}/>
+                         <label>Alma bomper trasero</label>
+                        <input type="text" className="Box-size" value={formData.Almabompertrasero} onChange={(event)=> setFormData({...formData, Almabompertrasero:event.target.value})}/>
                         {errors.almaParagolpesTrasero?.type=== "required"&&<p>* Obligatorio</p>}
                         </div>
                         <div>
                         <label >Base tijera izquierda</label>
-                        <input type="text" className="Box-size" {...register("baseTijeraIzquierda",{required:true,maxLength:25})}/>
+                        <input type="text" className="Box-size" value={formData.Basetijeraizquierda} onChange={(event)=> setFormData({...formData, Basetijeraizquierda:event.target.value})}/>
                          {errors.Modelo?.type=== "required"&&<p>* Obligatorio</p>}
 
                         </div>
                         <div>
-                        <label >Extensión punta izquierda</label>
-                        <input type="text" className="Box-size" {...register("extensiónPuntaIzquierda",{required:true,maxLength:25})}/>
+                        <label >Extensión puntas</label>
+                        <input type="text" className="Box-size" value={formData.Extensiónpuntas} onChange={(event)=> setFormData({...formData, Extensiónpuntas:event.target.value})}/>
                         {errors.extensiónPuntaIzquierda?.type=== "required"&&<p>* Obligatorio</p>}
                         </div>
                         <div>
                         <label >Barra estabilizadora</label>
-                        <input type="text" className="Box-size" {...register("barraEstabilizadora",{required:true,maxLength:25})}/>
+                        <input type="text" className="Box-size" value={formData.Barraestabilizadora} onChange={(event)=> setFormData({...formData, Barraestabilizadora:event.target.value})}/>
                         {errors.barraEstabilizadora?.type=== "required"&&<p>* Obligatorio</p>}
                         </div>
-                        <div>
-                        <label >Faldón inferior</label>
-                        <input type="text" className="Box-size" {...register("faldónInferior",{required:true,maxLength:25})}/>
-                        {errors.faldónInferior?.type=== "required"&&<p>* Obligatorio</p>}
-                        </div>
+                      
                         
                         <div>
                         <label >Punta delantera izq.</label>
-                        <input type="text" className="Box-size" {...register("puntaDelanteraIzq",{required:true,maxLength:6})}/>
+                        <input type="text" className="Box-size" value={formData.Puntadelanteraizq} onChange={(event)=> setFormData({...formData, Puntadelanteraizq:event.target.value})}/>
                         {errors.puntaDelanteraIzquierda?.type=== "required"&&<p>* Obligatorio</p>}
                         
                         </div>
@@ -61,141 +57,117 @@ function Inferior (){
                    
 
                         <div>
-                        <label >Alma paragolpes delantero</label>
-                        <input type="text" className="Box-size" {...register("almaParagolpesDelantero",{required:true,maxLength:6})}/>
+                        <label >Alma bomper delantero</label>
+                        <input type="text" className="Box-size" value={formData.Almabomperdelantero} onChange={(event)=> setFormData({...formData, Almabomperdelantero:event.target.value})}/>
                         {errors.almaParagolpesDelantero?.type=== "required"&&<p>* Obligatorio</p>}
                         
                         </div>
                         <div>
-                        <label>Base tijera derecha</label>
-                        <input type="text" className="Box-size" {...register("baseTijeraDerecho",{required:true,maxLength:18})}/>
+                        <label>Base tijeras</label>
+                        <input type="text" className="Box-size" value={formData.Basetijeras} onChange={(event)=> setFormData({...formData, Basetijeras:event.target.value})}/>
                  {errors.Chasis?.type=== "required"&&<p>* Obligatorio</p>}
                         
                         </div>
                         <div>
-                        <label >Carter</label>
-                        <input type="text" className="Box-size" {...register("carter",{required:true,maxLength:16})}/>
+                        <label >Carter caja</label>
+                        <input type="text" className="Box-size" value={formData.Cartercaja} onChange={(event)=> setFormData({...formData, Cartercaja:event.target.value})}/>
                  {errors.carter?.type=== "required"&&<p>* Obligatorio</p>}
                         </div>
                         <div>
-                        <label >Exosto</label>
-                        <input type="text" className="Box-size" {...register("exosto",{required:true,maxLength:16})}/>
+                        <label >Carter motor</label>
+                        <input type="text" className="Box-size" value={formData.Cartermotor} onChange={(event)=> setFormData({...formData, Cartermotor:event.target.value})}/>
                  {errors.exosto?.type=== "required"&&<p>* Obligatorio</p>}
                         </div>
                         <div>
-                        <label >Torre izquierda</label>
-                        <input type="text" className="Box-size" {...register("TorreIzquierda",{required:true,maxLength:16})}/>
+                        <label >Exosto</label>
+                        <input type="text" className="Box-size" value={formData.Exosto} onChange={(event)=> setFormData({...formData, Exosto:event.target.value})}/>
                  {errors.exosto?.type=== "required"&&<p>* Obligatorio</p>}
                         </div>
                     
-                        <div>
-                        <label >Punta trasera dere.</label>
-                        <input type="text" className="Box-size" {...register("puntaTraseraDere",{required:true,maxLength:6})}/>
-                        {errors.puntaDelanteraIzquierda?.type=== "required"&&<p>* Obligatorio</p>}
-                        
-                        </div>
 
                         
                 </Grid>
                 <Grid item xs={6} sm={2}>
-                        
-
-                        <div>
-                        <label >Desfase diagonales</label>
-                        <input type="text" className="Box-size" {...register("desfaseDiagonales",{required:true,maxLength:6})}/>
-                        {errors.Placa?.type=== "required"&&<p>* Obligatorio</p>}
-                        
-                        </div>
-                        <div>
-                        <label>Desfase en longitud</label>
-                        <input type="text" className="Box-size" {...register("desfaseEnLongitud",{required:true,maxLength:18})}/>
-                        {errors.Chasis?.type=== "required"&&<p>* Obligatorio</p>}
-                        
-                        </div>
-                        <div>
-                        <label >Cuna motor</label>
-                        <input type="text" className="Box-size" {...register("cunaMotor",{required:true,maxLength:6})}/>
-                          {errors.cunaMotor?.type=== "required"&&<p>* Obligatorio</p>}
-                        </div>
-                        <div>
-                        <label >Torre derecha</label>
-                        <input type="text" className="Box-size" {...register("TorreDerecha",{required:true,maxLength:6})}/>
-                          {errors.TorreDerecha?.type=== "required"&&<p>* Obligatorio</p>}
-                        </div> <div>
-                        <label >Punto delantera derecha</label>
-                        <input type="text" className="Box-size" {...register("PuntoDelanteraDerecha",{required:true,maxLength:6})}/>
+    
+                       <div>
+                        <label >Punta delantera derecha</label>
+                        <input type="text" className="Box-size" value={formData.Puntadelanteraderecha} onChange={(event)=> setFormData({...formData, Puntadelanteraderecha:event.target.value})}/>
                           {errors.PuntoDelanteraDerecha?.type=== "required"&&<p>* Obligatorio</p>}
                         </div>
                         <div>
-                        <label >Punta trasera izqu.</label>
-                        <input type="text" className="Box-size" {...register("puntaTraseraIzquierda",{required:true,maxLength:6})}/>
+                        <label >Punta trasera izq.</label>
+                        <input type="text" className="Box-size" value={formData.Puntatraseraizq} onChange={(event)=> setFormData({...formData, Puntatraseraizq:event.target.value})}/>
                         {errors.puntaDelanteraIzquierda?.type=== "required"&&<p>* Obligatorio</p>}
                         
                         </div>
-                       
+                        
+                        <div>
+                        <label >Punta trasera derecha</label>
+                        <input type="text" className="Box-size" value={formData.Puntatraseraderecha} onChange={(event)=> setFormData({...formData, Puntatraseraderecha:event.target.value})}/>
+                        {errors.puntaDelanteraIzquierda?.type=== "required"&&<p>* Obligatorio</p>}
+                        
+                        </div>
+                        <div>
+                        <label>Piso baul</label>
+                        <input type="text" className="Box-size" value={formData.Pisobaul} onChange={(event)=> setFormData({...formData, Pisobaul:event.target.value})}/>
+                        {errors.TanqueDeGasolina?.type=== "required"&&<p>* Obligatorio</p>}
+                        </div>                      <div>
+                        <label>Tanque de combustible</label>
+                        <input type="text" className="Box-size" value={formData.Tanquedecombustible} onChange={(event)=> setFormData({...formData, Tanquedecombustible:event.target.value})}/>
+                        {errors.PestañaPuntaTrasdelDerec?.type=== "required"&&<p>* Obligatorio</p>}
+                        </div>
                 </Grid>
                 <Grid item xs={6} sm={2}>
                         
 
                         <div>
-                        <label>Traviesa inferior</label>
-                        <input type="text" className="Box-size" {...register("TraviesaInferior",{required:true,maxLength:18})}/>
+                        <label>Traviesa delantera</label>
+                        <input type="text" className="Box-size" value={formData.Traviesadelantera} onChange={(event)=> setFormData({...formData, Traviesadelantera:event.target.value})}/>
                         {errors.TraviesaInferior?.type=== "required"&&<p>* Obligatorio</p>}
                         </div>
                         <div>
-                        <label >Pestaña punta tras izq.</label>
-                        <input type="text" className="Box-size" {...register("PestañaPuntaTrasIzq",{required:true,maxLength:6})}/>
+                        <label >Traviesa media</label>
+                        <input type="text" className="Box-size" value={formData.Traviesamedia} onChange={(event)=> setFormData({...formData, Traviesamedia:event.target.value})}/>
                           {errors.PestañaPuntaTrasIzq?.type=== "required"&&<p>* Obligatorio</p>}
                         </div>
                         <div>
-                        <label>Frontal</label>
-                        <input type="text" className="Box-size" {...register("Frontal",{required:true,maxLength:18})}/>
+                        <label>Traviesa trasera</label>
+                        <input type="text" className="Box-size" value={formData.Traviesatrasera} onChange={(event)=> setFormData({...formData, Traviesatrasera:event.target.value})}/>
                         {errors.Frontal?.type=== "required"&&<p>* Obligatorio</p>}
                         </div>
                         <div>
-                        <label>Piso baul inferior</label>
-                        <input type="text" className="Box-size" {...register("PisoBaulInferior",{required:true,maxLength:18})}/>
+                        <label>Frontal superior</label>
+                        <input type="text" className="Box-size" value={formData.Frontalsuperior} onChange={(event)=> setFormData({...formData, Frontalsuperior:event.target.value})}/>
                         {errors.PisoBaulInferior?.type=== "required"&&<p>* Obligatorio</p>}
                         </div>
-                        <div>
-                        <label>Tanque de gasolina</label>
-                        <input type="text" className="Box-size" {...register("TanqueDeGasolina",{required:true,maxLength:18})}/>
-                        {errors.TanqueDeGasolina?.type=== "required"&&<p>* Obligatorio</p>}
-                        </div>                      <div>
-                        <label>Pestaña punta tras del derec.</label>
-                        <input type="text" className="Box-size" {...register("PestañaPuntaTrasdelDerec",{required:true,maxLength:18})}/>
-                        {errors.PestañaPuntaTrasdelDerec?.type=== "required"&&<p>* Obligatorio</p>}
-                        </div>
+                   
                        
                 </Grid>
                 <Grid item xs={6} sm={2}>
                      
 
                         <div>
-                        <label >Traviesa superior</label>
-                        <input type="text" className="Box-size" {...register("TraviesaSuperior",{required:true,maxLength:6})}/>
+                        <label >Viga derecha</label>
+                        <input type="text" className="Box-size" value={formData.Vigaderecha} onChange={(event)=> setFormData({...formData, Vigaderecha:event.target.value})}/>
                         {errors.TraviesaSuperior?.type=== "required"&&<p>* Obligatorio</p>}
                         
                         </div>
                         <div>
-                        <label>G/ polvo eje izq.</label>
-                        <input type="text" className="Box-size" {...register("GpolvoEjeIzq",{required:true,maxLength:18})}/>
+                        <label>Viga izq.</label>
+                        <input type="text" className="Box-size" value={formData.Vigaizq} onChange={(event)=> setFormData({...formData, Vigaizq:event.target.value})}/>
                         {errors.GpolvoEjeIzq?.type=== "required"&&<p>* Obligatorio</p>}
                         
                         </div>
                         <div>
-                        <label >Piso carrocería</label>
-                        <input type="text" className="Box-size" {...register("PisoCarroceria",{required:true,maxLength:6})}/>
+                        <label >Frontal inferior</label>
+                        <input type="text" className="Box-size" value={formData.Frontalinferior} onChange={(event)=> setFormData({...formData, Frontalinferior:event.target.value})}/>
                           {errors.PisoCarroceria?.type=== "required"&&<p>* Obligatorio</p>}
                         </div>
+
+                
                         <div>
-                        <label >Pegas faldón inferior</label>
-                        <input type="text" className="Box-size" {...register("PegasFaldoninferior",{required:true,maxLength:6})}/>
-                          {errors.PegasFaldoninferior?.type=== "required"&&<p>* Obligatorio</p>}
-                        </div>
-                        <div>
-                        <label >Troque trasero</label>
-                        <input type="text" className="Box-size" {...register("TroqueTrasero",{required:true,maxLength:6})}/>
+                        <label >Panel</label>
+                        <input type="text" className="Box-size" value={formData.Panel} onChange={(event)=> setFormData({...formData, Panel:event.target.value})}/>
                           {errors.TroqueTrasero?.type=== "required"&&<p>* Obligatorio</p>}
                         </div>
                    
