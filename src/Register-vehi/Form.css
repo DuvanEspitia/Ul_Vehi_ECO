@@ -26,7 +26,8 @@ button[disabled]{
   color: #666666;
 }
 .footer{
-  margin-left: 35%;
+  margin-left: 40%;
+  display: inline-flex;
 }
 .form-container{
   width: 100%;
@@ -45,4 +46,26 @@ button[disabled]{
   width: 10%;
   height: 100%;
   background-color:red;
+}
+
+[class*="col-"] {
+  width: 100%;
+}
+.center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: -70%;
+}
+
+
+@media  (max-width: 768px) {
+ .footer {margin-left: 20%;}
+ 
+}
+.tex-menu{
+  margin-left: 7px;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  font-size: 16px;
 }

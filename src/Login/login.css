@@ -1,59 +1,54 @@
 .login {
-    background-color: #fa7777;
+  
     font-family: sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    display: grid;
+
     height: 100vh;
-   width: 100%;
+  
     
     }
     
     
-    input[type="text"],
+    input[type="text"].textLog,
     input[type="password"] {
-      height: 25px;
+      height: auto;
       border: 1px solid rgba(0, 0, 0, 0.856);
       border-radius: 4px;
-     
+      width: 50%;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
     
-    input[type="submit"][id="log"] {
+    .logi{
       margin-top: 5px;
       cursor: pointer;
       font-size: 15px;
       background: #f32828;
       border: 1px solid #01d28e;
       color: #fff;
-      width: 32%;
+      width: auto;
       padding: 10px 20px;
-      margin-left: 225px;
+      margin-left: 220px;
       margin-right: 200px;
       margin-top: 20px;
       border-radius: 2%;
       margin-bottom: 10px;
+      
     }
     
-    input[type="submit"]:hover {
-      background: #0c0c0cf8;
+    .logi:hover {
+      background: #f50404c1;
       
     }
     
     .button-container {
   
-      display: flex;
+      display: grid;
       justify-content: center;
       
     }
     
     .login-form {
-    
-     align-items: center;
-     align-content: center; 
-     margin-left: 22%;
-     width: 50%;
-     height: 100%;
+   
      background-color: rgb(255, 255, 255);
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
@@ -67,33 +62,31 @@
       font-size: 12px;
     }
     
-    .title {
-      text-align: center;
-      font-size: 25px;
-      margin-bottom: 20px;
-    }
     
     .input-container { 
       display: flex;
       justify-content: center;
       align-content: center;     
-      flex-direction: column;
-      margin-top: 25px;
+      flex-direction: column; 
       margin-left: 35%;
           
     }
     label{
-      display: flex;
+      display: absolute;
       align-items: center;
       font-family: sans-serif;
     }
     .icon{
+      display: flex;
      margin-left: 25%;
      margin-top: 20px;
       justify-content: center;
       align-content: center;
+      border-radius: 2%;
+      margin-bottom: 5%;
       width: 50%;
       height: 50%;
+      box-shadow: 0 4px 8px 0 rgba(154, 37, 37, 0.756), 0 6px 20px 0 rgba(255, 0, 0, 0.559);
       
     }
     .textLog
@@ -102,4 +95,3 @@
       border: #3C3F40;
       color: #3C3F40;
     }
-   

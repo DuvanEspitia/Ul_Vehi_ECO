@@ -38,8 +38,8 @@
     color: rgba(245, 239, 239, 0.863);
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   }
-  .Consulta{
-    margin-left: 42%;
+  .consulta{
+    margin-left: 40%;
     width: auto;
   }
   .b_consultar{
@@ -58,3 +58,45 @@
     color: rgba(245, 239, 239, 0.863);
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   }
+  .pro{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-direction: column;
+    
+  }
+  .cubo{
+    border-color: #ff1100;
+  }
+.protan{
+  width: 70%;
+  height: 90px;
+}.nel{
+  margin-top: 20px;
+  margin-left: 20%;
+  margin-bottom: 33px;
+}
+.blob-to-image{
+  width: 50%;
+  margin-left: 25%;
+  height: auto;
+}
+
+
+ .ko{
+  padding: 10px 20px;
+  display: inline-flex;
+  justify-content: center;
+ flex-direction: row;
+  
+ }
+ @media  (max-width: 844px) {
+  .consulta{margin-left: 35%;}
+  .ko{
+    display:  inline-block;
+    flex-direction: column;
+    
+  
+  }
+ }

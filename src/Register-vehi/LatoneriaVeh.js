@@ -11,102 +11,112 @@ function LatoneriaVeh({formData,setFormData}) {
         }
         return (<div>
 
-                <h2>Latoneria vehículo</h2>
+                <h2>Registro vehículo</h2>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                        <Grid container spacing={10} direction="row" alignItems="flex-start" justifyContent="center">
+                        <Grid container  direction="row" alignItems="flex-start" >
+
+                        <Grid item xs={12} sm={12}>
+                        <h5>Latoneria</h5>
+                        </Grid>
+
+                                <Grid item xs={12} sm={4}>
 
 
-
-                                <Grid item xs={6} sm={4}>
-
-
-                                        <div>
-                                                <label>Capota</label>
-                                                <input type="text" value={formData.Capota} onChange={(event)=> setFormData({...formData, Capota:event.target.value})} />
-                                                {errors.Capota?.type === "required" && <p>* Obligatorio</p>}
-                                        </div>
+                                       
                                         <div>
                                                 <label >Guarda fango izq.
                                                 </label>
-                                                <input type="text" value={formData.Guardafangoizq} onChange={(event)=> setFormData({...formData, Guardafangoizq:event.target.value})} />
-                                                {errors.GuardaFangoIzquierdo?.type === "required" && <p>* Obligatorio</p>}
+                                                <input type="text" value={formData.guardafangoizq} onChange={(event)=> setFormData({...formData, guardafangoizq:event.target.value})} />
+                                                
 
                                         </div>
                                         <div>
-                                                <label >Paragolpes trasero</label>
-                                                <input type="text" value={formData.Paragolpestrasero} onChange={(event)=> setFormData({...formData, Paragolpestrasero:event.target.value})} />
-                                                {errors.ParagolpesTrasero?.type === "required" && <p>* Obligatorio</p>}
+                                                <label >Bomper trasero</label>
+                                                <input type="text" value={formData.Bompertrasero} onChange={(event)=> setFormData({...formData, bompertrasero:event.target.value})} />
+                                               
                                         </div>
                                         <div>
-                                                <label >Paragolpes delantero</label>
-                                                <input type="text" value={formData.Paragolpesdelantero} onChange={(event)=> setFormData({...formData, Paragolpesdelantero:event.target.value})} />
-                                                {errors.ParagolpesDelantero?.type === "required" && <p>* Obligatorio</p>}
+                                                <label >Bomper delantero</label>
+                                                <input type="text" value={formData.bomperdelantero} onChange={(event)=> setFormData({...formData, bomperdelantero:event.target.value})} />
+                                               
+                                        </div>
+                                        
+                                        <div>
+                                                <label >Retrovisor izq.</label>
+                                                <input type="text" value={formData.retrovisorizquierdo} onChange={(event)=> setFormData({...formData, retrovisorizquierdo:event.target.value})} />
+                                             
                                         </div>
                                         <div>
-                                                <label>Persiana</label>
-                                                <input type="text" value={formData.Persiana} onChange={(event)=> setFormData({...formData, Persiana:event.target.value})} />
-                                                {errors.Persiana?.type === "required" && <p>* Obligatorio</p>}
+                                                <label >Retrovisor derecho</label>
+                                                <input type="text" value={formData.retrovisorderecho} onChange={(event)=> setFormData({...formData, retrovisorderecho:event.target.value})} />
+                                                
                                         </div>
-
 
 
 
                                 </Grid>
 
 
-                                <Grid item xs={6} sm={4}>
+                                <Grid item xs={12} sm={4}>
 
 
                                         <div>
                                                 <label >Puerta delantera izq.</label>
-                                                <input type="text" value={formData.Puertadelanteraizq} onChange={(event)=> setFormData({...formData, Puertadelanteraizq:event.target.value})} />
-                                                {errors.PuertaDelanteraIzquierda?.type === "required" && <p>* Obligatorio</p>}
+                                                <input type="text" value={formData.puertadelanteraizq} onChange={(event)=> setFormData({...formData, puertadelanteraizq:event.target.value})} />
+                                                
 
                                         </div>
-                                        <div>
-                                                <label className="hola">cabo cubierta parallantas</label>
-                                                <input type="text" value={formData.Cabocubiertaparallantas} onChange={(event)=> setFormData({...formData, Cabocubiertaparallantas:event.target.value})} />
-                                                {errors.caboCubiertaParallantas?.type === "required" && <p>* Obligatorio</p>}
-
-                                        </div>
+                   
                                         <div>
                                                 <label >Puerta delantera der.</label>
-                                                <input type="text"value={formData.Puertadelanterader} onChange={(event)=> setFormData({...formData, Puertadelanterader:event.target.value})} />
-                                                {errors.PuertaDelanteraDerecha?.type === "required" && <p>* Obligatorio</p>}
+                                                <input type="text"value={formData.puertadelanterader} onChange={(event)=> setFormData({...formData, puertadelanterader:event.target.value})} />
+                                                
                                         </div>
                                         <div>
                                                 <label >Costado derecho</label>
-                                                <input type="text" value={formData.Costadoderecho} onChange={(event)=> setFormData({...formData, Costadoderecho:event.target.value})} />
-                                                {errors.CostadoDerecho?.type === "required" && <p>* Obligatorio</p>}
+                                                <input type="text" value={formData.costadoderecho} onChange={(event)=> setFormData({...formData, costadoderecho:event.target.value})} />
+                                                
                                         </div>
                                         <div>
                                                 <label >Puerta trasera der.</label>
-                                                <input type="text" value={formData.Puertatraserader} onChange={(event)=> setFormData({...formData, Puertatraserader:event.target.value})} />
-                                                {errors.PuertaTraseraDerecha?.type === "required" && <p>* Obligatorio</p>}
+                                                <input type="text" value={formData.puertatraserader} onChange={(event)=> setFormData({...formData, puertatraserader:event.target.value})} />
+                                              
                                         </div>
+                                        
 
-
+                                        <div>
+                                                <label>Persiana</label>
+                                                <input type="text" value={formData.persiana} onChange={(event)=> setFormData({...formData, persiana:event.target.value})} />
+                                                
+                                        </div>  
 
                                 </Grid>
-                                <Grid item xs={6} sm={4}>
+                                <Grid item xs={12} sm={4}>
 
 
                                         <div>
                                                 <label >Compuerta</label>
-                                                <input type="text" value={formData.Compuerta} onChange={(event)=> setFormData({...formData, Compuerta:event.target.value})} />
-                                                {errors.Compuerta?.type === "required" && <p>* Obligatorio</p>}
+                                                <input type="text" value={formData.compuerta} onChange={(event)=> setFormData({...formData, compuerta:event.target.value})} />
+                                              
 
                                         </div>
                                         <div>
                                                 <label>Guardafango derecho</label>
-                                                <input type="text" value={formData.Guardafangoderecho} onChange={(event)=> setFormData({...formData, Guardafangoderecho:event.target.value})} />
-                                                {errors.GuardafangoDerecho?.type === "required" && <p>* Obligatorio</p>}
+                                                <input type="text" value={formData.guardafangoderecho} onChange={(event)=> setFormData({...formData, guardafangoderecho:event.target.value})} />
+                                    
 
                                         </div>
                                         <div>
                                                 <label >Puerta trasera izquierda</label>
-                                                <input type="text" value={formData.Puertatraseraizquierda} onChange={(event)=> setFormData({...formData, Puertatraseraizquierda:event.target.value})} />
-                                                {errors.PuertaTraseraIzquierda?.type === "required" && <p>* Obligatorio</p>}
+                                                <input type="text" value={formData.puertatraseraizquierda} onChange={(event)=> setFormData({...formData, puertatraseraizquierda:event.target.value})} />
+                                         
+
+
+                                        </div>
+                                        <div>
+                                                <label >ESTADO de la Latoneria en %</label>
+                                                <input type="number"  min="0" max="100" value={formData.porcetajelatoneria} onChange={(event)=> setFormData({...formData, porcetajelatoneria:event.target.value})} />
+                                            
 
 
                                         </div>

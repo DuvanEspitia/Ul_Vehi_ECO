@@ -1,42 +1,43 @@
 import React, { useState } from 'react';
 import { Dropdown, DropdownItem, DropdownMenu, DropdownToggle } from 'reactstrap';
 import { Link } from "react-router-dom";
-import './register.css';
+import './Form';
 import Swal from 'sweetalert2';
 import { useForm } from "react-hook-form";
 import { Grid } from "@material-ui/core"
-import axios from 'axios';
+import axios, { formToJSON } from 'axios';
 import Global from '../Back-edn/Global';
 
-function ClienteRegistrado() {
+function Registropersonas({formData,setFormData}) {
 
         
         const [dropdown4, setDropdown4] = useState(false);
         const abrirCerrarDropdown4 = () => { setDropdown4(!dropdown4); }
-        
+        let datos =[];
         const handleSubmit =async(e)=>{
                 e.preventDefault();
                 
-                        var url = Global.url;
+                  try{      var url = Global.url;
                 let inputValue = document.getElementById("id").value;
-                
                 var requst = "/api/cliente/identificacion/"+inputValue;
-                      try{ axios.get(url + requst).then((res )=> {
-                        if(!res.data[0]){
-                                Swal.fire({
-                                        title: 'Usuario no econtrado',
-                                        text: 'no se logro econtrar la cedula',
-                                        icon: 'error',
-                                        confirmButtonText: 'OK'
-                                      })
+                       axios.get(url + requst).then((res )=> {
+                                        if(!res.data[0]){
+                                                Swal.fire({
+                                                        title: 'Usuario no econtrado',
+                                                        text: 'No se logro econtrar la identifiación',
+                                                        icon: 'error',
+                                                        confirmButtonText: 'OK'
+                                                      })
 
-                                console.log("no")
-                        }
-
+                                                console.log("no")
+                                        }else{
+                                                setFormData({...formData,estado:false})
+                                        }
+                        
                                 let array = res.data;
-                                let ultimo = array.pop();
-
-
+                        let ultimo = array.pop();
+                      
+                       console.log(datos)
                 document.getElementById("Tid").innerHTML= ultimo.tipoIdentificacion;
                 document.getElementById("Le").innerHTML= ultimo.lugarexpedicion;
                 document.getElementById("nombre").innerHTML= ultimo.nombreC;
@@ -45,18 +46,28 @@ function ClienteRegistrado() {
                 document.getElementById("dire").innerHTML= ultimo.direccionC;
                 document.getElementById("tele").innerHTML= ultimo.telefonoC;
                 document.getElementById("celu").innerHTML= ultimo.celularC;
-             
-                                console.log(res.data)
-                                console.log(ultimo)
-                })
-        
-        }catch(error){
-                console.log(error);
-
-        }
-}
+                formData.id_cliente.id = ultimo.id;
                 
-    
+                          
+                              
+                              
+                })
+                
+        }catch(error){
+                Swal.fire({
+                        title: 'Usuario no econtrado',
+                        text: 'no se logro econtrar la cedula',
+                        icon: 'error',
+                        confirmButtonText: 'OK'
+                      })
+                      setFormData({...formData,estado:true})
+        }
+        
+        
+        }
+        
+                
+   
 
       
 
@@ -67,24 +78,25 @@ function ClienteRegistrado() {
 
 
                 <div>
-                        <h2>Consultar Cliente</h2>
+                        <h2>Asignar Cliente</h2>
                         <form onSubmit={handleSubmit}>
-                                <Grid container direction="row" >
+                                <Grid container direction="row" alignItems='flex-start'>
 
-                                        <Grid item xs={12} sm={12}>
-                                                <label className='consulta'  >Identificación a cosultar:</label>
-                                                <input className='Consulta' id="id" type="number" name="consultauser" />
-                                                <button className='b_consultars' type='submit' >Consultar</button>
-
+                                        <Grid item xs={9} sm={12}>
+                                                <div className='center'>
+                                                <label className='Consulta'  >Identificación a cosultar</label>
+                                                <input className='Consulta' value={formData.CC_cliente} onChange={(event)=> setFormData({...formData, CC_cliente:event.target.value})} id="id" type="text" name="consultauser" required />
+                                                <button className='b_consultar' type='submit' >Consultar</button>
+                                                </div>
                                         </Grid>
 
                                         <Grid item xs={12} sm={6}>
                                                 <div className="spacing">
                                                         <label >Tipo de indentificación:</label>
-                                                        <h6 id='Tid'></h6>
+                                                        <h6 id='Tid'  ></h6>
 
 
-                                                        <label >Lugar de expedición:</label>
+                                                        <label >Lugar de expedición: </label>
                                                         <h6 id='Le'></h6>
 
                                                         <label >Nombre completo:</label>
@@ -144,4 +156,12 @@ function ClienteRegistrado() {
 
 }
 
-export default ClienteRegistrado;
+export default Registropersonas;
+
+
+/*<div>
+
+                                                <label>Numero de indentificación</label> 
+                                                <input type="number" id="id" value={formData.id_cliente} onChange={(event)=> setFormData({...formData, id_cliente:event.target.value})}/><button className="button" onClick={bcliente}>buscar</button>
+                                                {errors.CarteraPuertaDelanteraIzquierda?.type === "required" && <p>* Obligatorio</p>}
+                                        </div>*/

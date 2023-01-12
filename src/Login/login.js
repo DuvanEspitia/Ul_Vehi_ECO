@@ -1,14 +1,17 @@
 import "./login.css";
 import React, { useState} from "react";
-import ReactDOM from "react-dom";
-import {Box,Grid} from "@material-ui/core"
+import Global from "../Back-edn/Global";
 import logo from "../Images/logo.jpg";
+import { Navigate,Route,useNavigate } from 'react-router-dom';
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
+import axios from "axios";
+import { red } from "@material-ui/core/colors";
 function Login() {
   // React States
   const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
-  
+  const navigate = useNavigate();
 
   // User Login info
   const database = [
@@ -49,6 +52,41 @@ function Login() {
       setErrorMessages({ name: "uname", message: errors.uname });
     }
   };
+  const redirec=()=>{
+
+     navigate('/home');
+  }
+  const handleSubmitt =async(e)=>{
+    e.preventDefault();
+    
+            var url = Global.url;
+            
+    let user = document.getElementById("id").value;
+    let pass = document.getElementById("pass").value;
+    var inicio = "?user="+user+"&"+"pass="+pass;
+    var requst = "/api/login/"+inicio;
+           axios.get(url + requst).then((res )=> {
+            
+            if(!res.data[0]){
+              Swal.fire({
+                      title: 'Usuario no econtrado',
+                      text: 'Los datos ingresados no son correctos',
+                      icon: 'error',
+                      confirmButtonText: 'OK'
+                    })
+
+              console.log("no")
+      }else{
+            redirec()
+
+
+      }
+ 
+                    
+                   
+    })
+
+}
 
   // Generate JSX code for error message
   const renderErrorMessage = (name) =>
@@ -62,30 +100,27 @@ function Login() {
       
       
       
-      <Grid container>
-      
-        <Grid item xs={12} sm={12}> 
+    
       <div className="containerimage"><img src={logo} className="icon" alt="user"></img></div>  
-        </Grid>
-       <Grid item xs={12} sm={12}>
+  
         <div className="form">
         
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmitt}>
          
           <div className="input-container">
             <label >Usuario </label>
-            <input type="text" name="uname" className="textLog" required />
+            <input type="text" id="id" name="uname" className="textLog" required />
               {renderErrorMessage("uname")}
           </div>
             <div className="input-container">
             <label>Contraseña </label>
-            <input type="password" name="pass"className="textLog" required />
+            <input type="password" id ="pass"name="pass"className="textLog" required />
             {renderErrorMessage("pass")}
           </div>
         <div className="button-container">
-        <Link to="/home" className="link">
-        <input type="submit" id="log" />
-        </Link>
+        
+        <button type="submit" className="logi" id="log" >Entrar</button>
+       
           
           
 
@@ -93,8 +128,7 @@ function Login() {
          
       </form>
       </div>
-     </Grid>
-     </Grid>
+   
    
     </div>
   );
@@ -102,16 +136,14 @@ function Login() {
   return (
     
     <div className="login">
-      <Grid container direction="column" justifyContent="center" alignItems="center">
-      <Grid item xs={12} sm={12}>
       <div className="login-form">
         {isSubmitted ? <div>User is successfully logged in</div>
         : renderForm}
       </div>
-      </Grid>
-      </Grid>
+     
+      
     </div>
-    
+   
   );
 }
 

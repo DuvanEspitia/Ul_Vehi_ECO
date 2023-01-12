@@ -11,100 +11,155 @@ function Luces({formData,setFormData}){
         }
         return (<div>
                 
-                 <h2>Luces (no se revisa su funcionamiento)</h2>
+                 <h2>Registro vehículo</h2>
         <form onSubmit={handleSubmit(onSubmit)}>    
-         <Grid container  spacing={10}  direction="row" alignItems="flex-start" >
+         <Grid container  direction="row"  >
          
 
-               
-                <Grid item xs={6} sm={4}>
+         <Grid item xs={12} sm={12}>
+                        <h5>Luces</h5>
+                        </Grid>
+                <Grid item xs={12} sm={4}>
                  
               
                  <div>
                          <label>Cocuyo lateral izquierdo</label>
-                        <input type="text"  value={formData.Cocuyolateralizquierdo} onChange={(event)=> setFormData({...formData, Cocuyolateralizquierdo:event.target.value})}/>
-                        {errors.DireccionalDelanteraIzquierda?.type=== "required"&&<p>* Obligatorio</p>}
+                        <input type="text"  value={formData.cocuyolateralizquierdo} onChange={(event)=> setFormData({...formData, cocuyolateralizquierdo:event.target.value})}/>
+                       
                         </div>
                         <div>
                         <label>Stop derecho
                         </label>
-                        <input type="text"  value={formData.Stopderecho} onChange={(event)=> setFormData({...formData, Stopderecho:event.target.value})}/>
-                         {errors.StopDerecho?.type=== "required"&&<p>* Obligatorio</p>}
+                        <input type="text"  value={formData.stopderecho} onChange={(event)=> setFormData({...formData, stopderecho:event.target.value})}/>
+                    
                          </div>
                          <div>
                         <label>Luz Tablero
                         </label>
-                        <input type="text" value={formData.LuzTablero} onChange={(event)=> setFormData({...formData, LuzTablero:event.target.value})}/>
-                         {errors.StopDerecho?.type=== "required"&&<p>* Obligatorio</p>}
+                        <input type="text" value={formData.luzTablero} onChange={(event)=> setFormData({...formData, luzTablero:event.target.value})}/>
+                       
                          </div>
                          <div>
                         <label>Luz techo</label>
-                        <input type="text"  value={formData.Luztecho} onChange={(event)=> setFormData({...formData, Luztecho:event.target.value})}/>
-                        {errors.direccionDelanteraDerecha?.type=== "required"&&<p>* Obligatorio</p>}
+                        <input type="text"  value={formData.luztecho} onChange={(event)=> setFormData({...formData, luztecho:event.target.value})}/>
+                        
+                        
+                        </div>
+                        <div>
+                        <label>Luz placa</label>
+                        <input type="text"  value={formData.luzplaca} onChange={(event)=> setFormData({...formData, luzplaca:event.target.value})}/>
+                        
+                        
+                        </div>
+                        <div>
+                        <label>Luz direccional delantero der.</label>
+                        <input type="text"  value={formData.luzdireccionaldelanteroder} onChange={(event)=> setFormData({...formData, luzdireccionaldelanteroder:event.target.value})}/>
+                        
+                        
+                        </div>
+                        <div>
+                        <label>Luz direccional delantero izq.</label>
+                        <input type="text"  value={formData.luzdireccionaldelanteroizq} onChange={(event)=> setFormData({...formData, luzdireccionaldelanteroizq:event.target.value})}/>
+                        
                         
                         </div>
                        
                 </Grid>
                 
              
-                <Grid item xs={6} sm={4}>
+                <Grid item xs={12} sm={4}>
                    
 
                         <div>
                         <label >Farola izquierda</label>
-                        <input type="text"  value={formData.Farolaizquierda} onChange={(event)=> setFormData({...formData, Farolaizquierda:event.target.value})}/>
-                        {errors.farolaIzquierda?.type=== "required"&&<p>* Obligatorio</p>}
+                        <input type="text"  value={formData.farolaizquierda} onChange={(event)=> setFormData({...formData, farolaizquierda:event.target.value})}/>
+                        
                         
                         </div>
                         <div>
                         <label >Farola derecha</label>
-                        <input type="text"  value={formData.Faroladerecha} onChange={(event)=> setFormData({...formData, Faroladerecha:event.target.value})}/>
-                 {errors.lunetaCostadoIzquierdo?.type=== "required"&&<p>* Obligatorio</p>}
+                        <input type="text"  value={formData.faroladerecha} onChange={(event)=> setFormData({...formData, faroladerecha:event.target.value})}/>
+                
                         
                         </div>
                         <div>
                         <label>Radio
                         </label>
-                        <input type="text"  value={formData.Radio} onChange={(event)=> setFormData({...formData, Radio:event.target.value})}/>
-                         {errors.StopDerecho?.type=== "required"&&<p>* Obligatorio</p>}
+                        <input type="text"  value={formData.radio} onChange={(event)=> setFormData({...formData, radio:event.target.value})}/>
+                         
                          </div>
-
+                         <div>
+                        <label>Luz direccional trasero der.</label>
+                        <input type="text"  value={formData.luzdireccionaltraseroder} onChange={(event)=> setFormData({...formData, luzdireccionaltraseroder:event.target.value})}/>
+                        
+                        
+                        </div>
+                        <div>
+                        <label>Luz direccional trasero izq.</label>
+                        <input type="text"  value={formData.luzdireccionaltraseroizq} onChange={(event)=> setFormData({...formData,luzdireccionaltraseroizq:event.target.value})}/>
+                        
+                        
+                        </div>
+                        <div>
+                        <label>Pito</label>
+                        <input type="text"  value={formData.pito} onChange={(event)=> setFormData({...formData, pito:event.target.value})}/>
+                        
+                        
+                        </div>
                          <div>
                         <label>Otros</label>
-                        <input type="text"  value={formData.Otros} onChange={(event)=> setFormData({...formData, Otros:event.target.value})}/>
-                        {errors.direccionDelanteraDerecha?.type=== "required"&&<p>* Obligatorio</p>}
+                        <input type="text"  value={formData.otros} onChange={(event)=> setFormData({...formData, otros:event.target.value})}/>
+                        
                         
                         </div>
                 </Grid>
-                <Grid item xs={6} sm={4}>
+                <Grid item xs={12} sm={4}>
                         
 
                         <div>
                         <label >Stop izquierdo</label>
-                        <input type="text"  value={formData.Stopizquierdo} onChange={(event)=> setFormData({...formData, Stopizquierdo:event.target.value})}/>
-                        {errors.StopIzquierdo?.type=== "required"&&<p>* Obligatorio</p>}
+                        <input type="text"  value={formData.stopizquierdo} onChange={(event)=> setFormData({...formData, stopizquierdo:event.target.value})}/>
+                       
                         
                         </div>
                         <div>
                         <label>Cocuyo lateral derecho</label>
-                        <input type="text"  value={formData.Cocuyolateralderecho} onChange={(event)=> setFormData({...formData, Cocuyolateralderecho:event.target.value})}/>
-                        {errors.direccionDelanteraDerecha?.type=== "required"&&<p>* Obligatorio</p>}
+                        <input type="text"  value={formData.cocuyolateralderecho} onChange={(event)=> setFormData({...formData, cocuyolateralderecho:event.target.value})}/>
+                        
                         
                         </div>
                         <div>
                         <label>Exploradora izq.
                         </label>
-                        <input type="text"  value={formData.Exploradoraizq} onChange={(event)=> setFormData({...formData, Exploradoraizq:event.target.value})}/>
-                         {errors.StopDerecho?.type=== "required"&&<p>* Obligatorio</p>}
+                        <input type="text"  value={formData.exploradoraizq} onChange={(event)=> setFormData({...formData, exploradoraizq:event.target.value})}/>
+                
                          </div>
                        
                          <div>
-                        <label>Exploradora derecha
-                        </label>
-                        <input type="text"  value={formData.Exploradoraderecha} onChange={(event)=> setFormData({...formData, Exploradoraderecha:event.target.value})}/>
-                         {errors.StopDerecho?.type=== "required"&&<p>* Obligatorio</p>}
-                         <br  /> <br  /><br  />  <br  /><br  />  <br  /><br  /> 
+                        <label>Exploradora derecha</label>
+                        <input type="text"  value={formData.exploradoraderecha} onChange={(event)=> setFormData({...formData, exploradoraderecha:event.target.value})}/>
+                
+                       
                          </div>
+                         <div>
+                        <label>Luz reversa derecha</label>
+                        <input type="text"  value={formData.luzreversaderecha} onChange={(event)=> setFormData({...formData, luzreversaderecha:event.target.value})}/>
+                
+                       
+                         </div>
+                         <div>
+                        <label>Luz reversa izquierda</label>
+                        <input type="text"  value={formData.luzreversaizquierda} onChange={(event)=> setFormData({...formData, luzreversaizquierda:event.target.value})}/>
+                
+                       
+                         </div>
+                         <div>
+                        <label>ESTADO de luces en %</label>
+                        <input type="number"   min="0" max="100" value={formData.porcentajeestadoluces} onChange={(event)=> setFormData({...formData, porcentajeestadoluces:event.target.value})}/>
+                
+                       
+                         </div>
+
                 </Grid>
                 
                 

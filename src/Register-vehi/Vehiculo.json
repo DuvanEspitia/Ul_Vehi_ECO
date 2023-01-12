@@ -1,0 +1,180 @@
+[
+    {
+        "Id_cliente":null,
+        "Id_motor":null,
+        "Placa":"",
+        "Nacionalidad":"",
+        "Kilometraje":"",
+        "Transmision":"",
+        "Fotolateralder":"",
+        "Clase":"",
+        "Tipodecaja":"",
+        "color":"",
+        "Version":"",
+        "Fototrasera":"",
+        "Fotoconsola":"",
+        "Marca" :"",
+        "Cilindraje":"",
+        "Nrochasis":"",
+        "SOAT":"",
+        "Tipo":"",
+        "Combustible":"",
+        "Nroserial":"",
+        "Tarjetadepropiedad":"",
+        "Carroceria":"",
+        "Tipodepintura":"", 
+        "Nromotor":"",
+        "Fotofrente":"",
+        "Modelo":"",
+        "Servicio":"",
+        "Traccion":"",
+        "Fotolateralizq":"",
+      
+      
+     
+        
+       
+        "Gpolvometalicoizq":"",
+        "Engrafescostadoderecho":"",
+      
+        "Estriboizquierdo":"",
+        "Estriboderecho":"",
+        "Gpolvometalicoderecho":"",
+        "Engrafescostadoizquierdo":"",
+       
+        "Pisobaulsuperior":"",
+        
+        
+        "Guardafangoizq":"",
+        "Bompertrasero":"",
+        "Bomperdelantero":"",
+        "Persiana":"",
+        "Puertadelanteraizq":"",
+        "Retrovisorizquierdo":"",
+        "Retrovisorderecho":"",
+        "Puertadelanterader":"",
+        "Costadoderecho":"",
+        "Puertatraserader":"",
+        "Compuerta":"",
+        "Guardafangoderecho":"",
+        "Puertatraseraizquierda":"",
+        "PanelTrasero":"",
+        "Pisobaul":"",
+        "Capota":"",
+      
+        "Paraldelanteroizquierdo":"",
+        "Paralcentralderecho":"",
+        "Paralcentralizquierdo":"",
+        "Paraltraseroderecho":"",
+        "Paraltraseroizquierdo":"",
+
+
+
+
+
+
+        
+        "Sunroof":"",
+        "Vidriodelanteroizquierdo":"",
+        "Vidriodelanteroderecho":"",
+        "Vidriotraseroizquierdo":"",
+        "Vidriotraseroderecho":"",
+        "Lunetaretrovisorizquierdo":"", 
+        "Panoramicotrasero":"",
+        "Lunetaretrovisorderecho":"",
+        "Retrovisorinterior":"",
+        "Panorámicodelantero":"",
+
+
+
+        "Porcentajeesctructura":"",
+        "Porcentajeestadointerior":"",
+        "Porcetajelatoneria":"",
+        "Porcentajevidrios":"",
+        "Porcentajedechasis":"",
+        "Porcentajeestadoluces":"",
+        "Basetijeraizquierda":"",
+        "Extensionpuntadelantera":"",
+        "Extensionpuntatrasera":"",
+        "Barraestabilizadora":"",
+        "Puntadelanteraizq":"",
+        "Basetijeraderecha":"",
+        "Cartercaja":"",
+        "Cartermotor":"",
+        "Exosto":"",
+        "Puntadelanteraderecha":"",
+        "Puntatraseraizq":"",
+        "Puntatraseraderecha":"",
+        "Tanquedecombustible":"",
+        "Traviesadelantera":"",
+        "Traviesamedia":"",
+        "Traviesatrasera":"",
+        "Frontalsuperior":"",
+        "Vigaderecha":"",
+        "Vigaizq":"",
+        "Frontalinferior":"",
+        "Panel":"",
+        
+       
+
+        "Carterapuertadelanteraizq":"",
+        "Carterapuertatraserader":"",
+        "Cojineriadelanteraizq":"",
+        "Cojineriatrasera":"",
+        "CojineriaDelanteraDerecha":"",
+        "Consolacentral":"",
+        "Carterapuertatraseraizq":"",
+        "Carterapuertadelanterader":"",
+        "Tapiceriapiso":"",
+        "Tapetesalfombras":"",
+        "Parasolizquierdo":"",
+        "Parasolderecho":"",
+        "Barradecambios":"",
+        "Timon":"",
+        "Tablero":"",
+        "Frenodemano":"",
+        "Guantera":"",
+        "Mandopuertadelanteraizqui":"",
+        "Mandopuertadelanteradere":"",
+        "Mandopuertatraseradere":"",
+        "Mandopuertatraseraizqui":"",
+        "Tapiceriatecho":"",
+        "TableroInstrumentos":"",
+
+
+
+        " Luzdireccionaldelanteroder":"",
+        "Luzdireccionaldelanteroizq":"",
+        "Luzdireccionaltraseroder":"",
+        "Luzdireccionaltraseroizq":"",
+        "Pito":"",
+        "Luzreversaderecha":"",
+        "Luzreversaizquierda":"",
+        "Cocuyolateralizquierdo":"",
+        "Stopderecho":"",
+        "LuzTablero":"",
+        "Luztecho":"",
+        "Farolaizquierda":"",
+        "Faroladerecha":"",
+        "Radio":"",
+        " Otros":"",
+        "Stopizquierdo":"",
+        "Cocuyolateralderecho":"",
+        "Exploradoraizq":"",
+        "Exploradoraderecha":"",
+        "Luzplaca":"",
+      
+
+
+
+        "Llantadelanteraderecha":"",
+        "Llantadelanteraizquierda":"",
+        "Llantatraseraderecha":"",
+        "Llantatraseraizquierda":"",
+        "Suspensiondelanteraizquierda":"",
+        "Suspensiondelanteraderecha":"",
+        "Suspensiontraseraizquierda":"",
+        "Suspensiontraseraderecha":"",
+        "observaciones":""
+    }
+]

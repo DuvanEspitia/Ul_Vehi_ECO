@@ -1,8 +1,9 @@
-.ClienteRegistrado{
-  font-family: sans-serif;
 
-}
-
+body {
+    background: #ffffff;
+   
+  }
+  
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
@@ -30,31 +31,29 @@
     padding: center;
   }
  
-  select {
+ .select {
     display: block;
     box-sizing:border-box;
-    width: 50%;
+    width: auto;
     padding: 10px 16px;
     
   }
   
-  .butonreg{
-  
-  
-    
+  input[type="submit"][id="regis-cli"]{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-   
-    background:  #ff0000f8;
+    background: #F23545;
     color: rgb(255, 255, 255);
+    text-transform: uppercase;
     border: none;
-    margin-top: 8%;
+    margin-top: 5%;
+    width: 20%;
+    height: 5%  ;
     font-size: 16px;
-    padding: 10px 20px;
-    border-radius: 5px;
+    margin-left: 0%;
 
   }
-  .butonreg:hover {
-    background:#F23545;
+  input[type="submit"]:hover {
+    background: #ff0000f8;
     
   }
   h2 {
@@ -67,6 +66,9 @@
     padding-bottom: 10px;
     border-bottom: 2px solid #F23545;
   }
+
+
+ 
 .spacing{
   margin-left: 35%;
 }
@@ -79,18 +81,22 @@ p [id="validacionRe"]{
   color: white;
   margin-bottom: 15px;
 }
-.butooncenter{
-  display: flex;
-align-items: center;
-justify-content: center;
+.cuerpo{
+  margin-left: 10px;
 }
-input[name="consultauser"]{
- margin-left: 40%;
+input[type="text"],[type="number"]{
+  height: auto;
   border: 1px solid rgba(0, 0, 0, 0.856);
   border-radius: 4px;
+  width: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-@media  (max-width: 844px) {
-  input[name="consultauser"]{
-    margin-left: 30%;}
+.reB{ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+} @media  (max-width: 912px) {
+  .spacing{margin-left: 20%;}
+ 
  }

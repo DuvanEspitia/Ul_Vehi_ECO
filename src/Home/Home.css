@@ -12,6 +12,7 @@
   }
   
   .Button-home {
+    margin-left: 8%;
     width: 50%!important;
     height: 50%!important;
   }
@@ -47,9 +48,10 @@
    
     
     width: 100%!important;
-    border-color: rgb(0, 0, 0) !important;
+    
     
   }
+ 
   .dropdown-menu.show {
     display: block!important;
     width: 100%!important;
@@ -63,19 +65,19 @@
   
   .img {
    
-    margin-left: 20%;
+    margin-left: 45%;
     padding: 10% 20%;
-    width: 130%;
-    height: 130%;
+    width: 70%;
+    height: 70%;
   }
   .space{
     margin-top: 5%;
   }
   .imgc{
-    margin-left: 20%;
-    padding: 10% 20%;
-    width: 130%;
-    height: 130%;
+    margin-left: 45%;
+    padding: 10% 25%;
+    width: 80%;
+    height: 80%;
     margin-top: 14px;
   }
 
@@ -84,4 +86,12 @@
   background-size: cover;
  background: linear-gradient(#ff000005,#ffffff,#ffffff,#ff00002c );
 
+}
+.menu{
+  background-color: #F23545!important;
+  color: #ffffff!important;
+  width: auto!important;
+}
+.C-menu{
+  margin-right: 100%;
 }

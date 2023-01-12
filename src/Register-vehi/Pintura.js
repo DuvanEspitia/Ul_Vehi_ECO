@@ -11,11 +11,13 @@ function Pintura({formData,setFormData}){
         }
         return (<div>
                 
-                 <h2>Pintura</h2>
+                 <h2>Registro vehículo</h2>
         <form onSubmit={handleSubmit(onSubmit)}>    
-         <Grid container  spacing={10}  alignItems="flex-start" justifyContent="center">
+         <Grid container   alignItems="flex-start" >
          
-
+         <Grid item xs={12} sm={12}>
+                        <h5>Pintura</h5>
+                        </Grid>
                
                 <Grid item xs={6} sm={3}>
                  
@@ -69,7 +71,7 @@ function Pintura({formData,setFormData}){
                         
                         </div>
                         <div>
-                        <label className="hola">Pint cubierta parallama</label>
+                        <label >Pint cubierta parallama</label>
                         <input type="text" value={formData.Pintcubiertaparallama} onChange={(event)=> setFormData({...formData, Pintcubiertaparallama:event.target.value})}/>
                  {errors.pintCubiertaParallama?.type=== "required"&&<p>* Obligatorio</p>}
                         

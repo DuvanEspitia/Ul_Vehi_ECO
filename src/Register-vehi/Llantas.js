@@ -12,19 +12,21 @@ function Llantas({formData,setFormData}) {
         return (<div>
 
 
-                <h2>Llantas</h2>
+                <h2>Registro vehículo</h2>
 
                 <form onSubmit={handleSubmit(onSubmit)}>
 
                         <Grid container direction="row" stifyContent="space-evenly"  >
 
-
+                        <Grid item xs={12} sm={12}>
+                        <h5>Suspensión y llantas</h5>
+                        </Grid>
                                 <Grid item xs={12} sm={6}>
 
-                                        <br />
+                                       
                                         <div className="llanta">
                                                 <label>Llanta delantera derecha</label>
-                                                <select value={formData.Llantadelanteraderecha} onChange={(event)=> setFormData({...formData, Llantadelanteraderecha:event.target.value})}>
+                                                <select value={formData.llantadelanteraderecha} onChange={(event)=> setFormData({...formData, llantadelanteraderecha:event.target.value})}>
                                                         <option value="null">Selec</option>
                                                         <option value="0%">0%</option>
                                                         <option value="10%">10%</option>
@@ -42,9 +44,9 @@ function Llantas({formData,setFormData}) {
                                                 </select>
                                         </div>
                                         <div className="llanta">
-                                                <br />
+                                            
                                                 <label>Llanta delantera izquierda</label>
-                                                <select value={formData.Llantadelanteraizquierda} onChange={(event)=> setFormData({...formData, Llantadelanteraizquierda:event.target.value})}>
+                                                <select value={formData.llantadelanteraizquierda} onChange={(event)=> setFormData({...formData, llantadelanteraizquierda:event.target.value})}>
                                                 <option value="null">Selec.</option>
                                                         <option value="0%">0%</option>
                                                         <option value="10%">10%</option>
@@ -61,16 +63,17 @@ function Llantas({formData,setFormData}) {
                                                 </select>
 
                                         </div>
-                                </Grid>
+                                        </Grid>
+                                        
 
 
 
                                 <Grid item xs={12} sm={6}>
 
-                                        <br />
+            
                                         <div className="llanta">
                                                 <label>Llanta trasera derecha</label>
-                                                <select value={formData.Llantatraseraderecha} onChange={(event)=> setFormData({...formData, Llantatraseraderecha:event.target.value})}>
+                                                <select value={formData.llantatraseraderecha} onChange={(event)=> setFormData({...formData, llantatraseraderecha:event.target.value})}>
                                                         <option value="null">Selec.</option>
                                                         <option value="0%">0%</option>
                                                         <option value="10%">10%</option>
@@ -87,9 +90,9 @@ function Llantas({formData,setFormData}) {
                                                 </select>
                                         </div>
                                         <div className="llanta" >
-                                                <br />
+                                             
                                                 <label>Llanta trasera izquierda</label>
-                                                <select value={formData.Llantatraseraizquierda} onChange={(event)=> setFormData({...formData, Llantatraseraizquierda:event.target.value})}>
+                                                <select value={formData.llantatraseraizquierda} onChange={(event)=> setFormData({...formData, llantatraseraizquierda:event.target.value})}>
                                                 <option value="null">Selec.</option>
                                                         <option value="0%">0%</option>
                                                         <option value="10%">10%</option>
@@ -104,11 +107,71 @@ function Llantas({formData,setFormData}) {
                                                         <option value="100%">100%</option>
 
                                                 </select>
-                                                <br /><br /><br />
+                                             
                                         </div>
+
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+
+                                        <div className="llanta">
+                                               
+                                                <label>Suspensión trasera izquierda</label>
+                                                <select value={formData.suspensiontraseraizquierda} onChange={(event)=> setFormData({...formData, suspensiontraseraizquierda:event.target.value})}>
+                                                <option value="null">Selec.</option>
+                                                <option value="Aceptable">Aceptable</option>
+                                                        <option value="Deficiente">Optimo</option>
+                                                        <option value="Optimo">Deficiente</option>
+                                                </select>
+
+                                        </div>
+                                        <div className="llanta">
+                                               
+                                               <label>Suspensión trasera derecha</label>
+                                               <select value={formData.suspensiontraseraderecha} onChange={(event)=> setFormData({...formData, suspensiontraseraderecha:event.target.value})}>
+                                               <option value="null">Selec.</option>
+                                               <option value="Aceptable">Aceptable</option>
+                                                        <option value="Deficiente">Optimo</option>
+                                                        <option value="Optimo">Deficiente</option>
+                                               </select>
+
+                                       </div>
 
 
                                 </Grid>
+                                <Grid item xs={12} sm={6}>
+                                        <div className="llanta">
+                                               
+                                                <label>Suspensión delantera izquierda</label>
+                                                <select value={formData.suspensiondelanteraizquierda} onChange={(event)=> setFormData({...formData, suspensiondelanteraizquierda:event.target.value})}>
+                                                <option value="null">Selec.</option>
+                                                        <option value="Aceptable">Aceptable</option>
+                                                        <option value="Deficiente">Optimo</option>
+                                                        <option value="Optimo">Deficiente</option>
+                                                </select>
+
+                                        </div>
+                                        <div className="llanta">
+                                               
+                                               <label>Suspensión delantera derecha</label>
+                                               <select value={formData.suspensiondelanteraderecha} onChange={(event)=> setFormData({...formData, suspensiondelanteraderecha:event.target.value})}>
+                                               <option value="null">Selec.</option>
+                                               <option value="Aceptable">Aceptable</option>
+                                                        <option value="Deficiente">Optimo</option>
+                                                        <option value="Optimo">Deficiente</option>
+                                               </select>
+
+                                       </div>
+                                </Grid>
+                                <Grid item xs={12}>
+                       
+
+                       <div>
+                       <label className="observaciones">Observaciones generales</label>
+                       <textarea className="Observaciones" value={formData.observaciones} onChange={(event)=> setFormData({...formData, observaciones:event.target.value})}></textarea>
+                    
+                       </div>
+                       
+               </Grid>
                         </Grid>
 
                 </form>
